@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+  name: springboot-service
+
+  namespace: jenkins
+
+
+spec:
+
+  replicas: 3
+
+  selector:
+    matchLabels:
+      app: springboot-ki
+
+  template:
+
+    metadata:
+      labels:
+        app: springboot-ki
+
+    spec:
+
+      containers:
+
+        - name: springboot-ki
+
+          image: myspring:1.0
+
+          imagePullPolicy: IfNotPresent
+
+          ports:
+
+            - containerPort: 8089
