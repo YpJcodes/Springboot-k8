@@ -28,7 +28,7 @@ spec:
 
         - name: springboot-ki
 
-          image: myspring:1.0
+          image: phanijayanth/springboot-k8s-demo
 
           imagePullPolicy: Always
 
