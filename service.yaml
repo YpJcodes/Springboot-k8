@@ -4,11 +4,11 @@ kind: Service
 
 metadata:
   name: springboot-service
-  namespace: springboot
+  namespace: jenkins
 
 spec:
 
-  type: NodePort
+  type: LoadBalancer
 
   selector:
     app: springboot-ki
